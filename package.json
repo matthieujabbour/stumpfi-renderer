@@ -1,0 +1,74 @@
+{
+  "name": "stumpfi-renderer",
+  "version": "1.0.0",
+  "description": "HTML renderer for the stumpfi file format.",
+  "repository": "https://github.com/matthieujabbour/stumpfi-renderer",
+  "homepage": "https://github.com/matthieujabbour/stumpfi-renderer",
+  "main": "./src/main.ts",
+  "keywords": [
+    "stumpfi",
+    "file",
+    "format",
+    "html",
+    "react",
+    "renderer"
+  ],
+  "author": "Matthieu JABBOUR <matthieu.jabbour@gmail.com> (https://github.com/matthieujabbour)",
+  "contributors": [
+    {
+      "name": "Matthieu JABBOUR",
+      "url": "https://github.com/matthieujabbour"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matthieujabbour/stumpfi-renderer/issues"
+  },
+  "types": "./config/types.d.ts",
+  "devDependencies": {
+    "@types/fs-extra": "^4.0.0",
+    "@types/jest": "^21.1.0",
+    "@types/react": "^16.0.10",
+    "@types/react-dom": "^16.0.1",
+    "@types/webpack": "^3.0.9",
+    "awesome-typescript-loader": "^3.2.3",
+    "fs-extra": "^4.0.1",
+    "jest": "^21.1.0",
+    "ts-jest": "^21.0.1",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.6.0",
+    "tslint-config-stumpfi": "^1.0.7",
+    "tslint-loader": "^3.5.3",
+    "typedoc": "^0.9.0",
+    "typescript": "^2.4.2",
+    "webpack": "^3.5.5"
+  },
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "scripts": {
+    "start": "ts-node scripts/start",
+    "build": "ts-node scripts/build",
+    "test": "ts-node scripts/test --coverage --watch",
+    "doc": "./node_modules/.bin/typedoc --out ./doc/ src/"
+  },
+  "engines": {
+    "node": ">= 4"
+  },
+  "jest": {
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  }
+}
